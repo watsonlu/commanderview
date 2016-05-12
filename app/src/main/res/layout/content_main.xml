@@ -11,20 +11,23 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="ca.baseplate.commandercounter.commandercounter.MainActivity"
     tools:showIn="@layout/activity_main"
-    android:elevation="0dp">
+    android:background="@color/white"
+
+    >
 
     <RelativeLayout
         android:id="@+id/commander"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="250dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:elevation="20dp">
+        android:outlineProvider="bounds"
+        android:elevation="10dp">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="425dp"
+            android:layout_height="wrap_content"
             android:id="@+id/art"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
@@ -33,12 +36,12 @@
             android:src="@drawable/animar" />
 
         <RelativeLayout
-            android:id= "@+id/controls"
+            android:id= "@+id/imageLayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_below="@+id/art"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true">
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/art"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,61 +49,31 @@
                 android:text="Animar, Soul of Elements"
                 android:id="@+id/title"
                 android:padding="5dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerInParent="true" />
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
 
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/powertoughness"
-                android:layout_below="@+id/title"
-                android:layout_centerInParent="true"
-                android:gravity="center_horizontal"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="3"
-                    android:id="@+id/power"
-                    android:padding="5dp"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="/"
-                    android:id="@+id/slash"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@id/power"
-                    android:padding="5dp"/>
+    </RelativeLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="3"
-                    android:id="@+id/toughness"
-                    android:padding="5dp"
-                    android:layout_toRightOf="@id/slash"/>
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/powertoughness"
-                android:layout_centerInParent="true"
-                android:gravity="center_horizontal"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Three Counters"
-                    android:id="@+id/counters"
-                    android:padding="5dp" />
-            </RelativeLayout>
+    <RelativeLayout
+        android:id= "@+id/controls"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/commander"
+        android:paddingTop="100dp"
+        android:outlineProvider="bounds"
+        android:elevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
 
         </RelativeLayout>
+
+
     </RelativeLayout>
 </RelativeLayout>
